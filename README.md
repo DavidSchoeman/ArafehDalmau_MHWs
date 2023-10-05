@@ -13,7 +13,7 @@ CMIP6 sea-surface temperature projections were downloaded in 2020/2021 from the 
 Code was developed over the period 2020–2023. Some packages might now be deprecated or are nearing deprecation (e.g., raster). As a result, I have subsequently improved some workflows for a follow-on paper and I will update this repo with that improved code once that paper is published.
 
 # How to use the code
-After downloading the requisite data, the user should run the code chunks sequentially from "0_Regrid_tos" to "XXX". Each code chunk should produce output (files written to disk) that is used as input in the subsequent chunk(s).
+After downloading the requisite data, the user should run the code chunks sequentially from "1_tos_Regrid_Anom" to "XXX". Each code chunk should produce output (files written to disk) that is used as input in the subsequent chunk(s).
 Note that the folders/directories named in this code pertain to my own setup, and these paths will need to be edited to suit the user's own machine.
 
 # Fair warning

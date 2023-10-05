@@ -62,4 +62,4 @@
 				system(paste0("cdo div ", f[i], " -gec,0.5 mask.nc ", unlist(strsplit(f[i], ".nc"))[1], "masked.nc")) # Mask each 118-year stack
 				}
 			}
-# Goto Break_into_Blocks.R
+# Goto 6_Break_into_Blocks.R

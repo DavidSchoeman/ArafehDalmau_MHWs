@@ -31,4 +31,4 @@
 		dO <- paste0("cdo delete,month=2,day=29 ", dRegrid, "/OISST.nc ", dRegrid, "/OISST_365.nc")
 			system(dO)
 
-# Goto 3.1_Prep_OISST_CMIP6.R or 3.2_Prep_hist_CMIP6.R
+# Goto 3_Prep_OISST_CMIP6.R

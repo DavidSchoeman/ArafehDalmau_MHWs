@@ -16,4 +16,4 @@
 		registerDoMC(cores = detectCores()-2)
 			plyr::ldply(xx, .fun = pllYr, .parallel = TRUE)
 		
-# Goto 5.1_Combine_CMIP_OISST or 5.2_Combine_CMIP_hist
+# Goto 5.1_Combine_CMIP_OISST or 5.2_Combine_CMIP_hist, depending on what needs doing
