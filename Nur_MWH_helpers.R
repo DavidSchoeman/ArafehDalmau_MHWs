@@ -7,7 +7,6 @@
 		library(ncdf4)
 		library(lubridate)
 		library(raster)
-		library(SOAR)
 		library(tidyverse)
 		library(heatwaveR)
 		library(doMC)
