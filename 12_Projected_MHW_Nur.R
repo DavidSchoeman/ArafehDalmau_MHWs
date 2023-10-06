@@ -14,7 +14,7 @@
 	
 # Read coordinates, find extent, square it out, then extract points -------------
 
-	dat <- read.csv("Sites_MHWs.csv") # Data provided by Nur on 17 November 2020
+	dat <- read.csv("Data/Sites_MHWs.csv") # Data provided by Nur on 17 November 2020
 	# r <- rasterFromXYZ(dat[,c(3, 2, 4)], crs = projection(raster()))
 	# r <- crop(raster(), extent(r) + 2)
 	# 	r[] <- 1:ncell(r)
@@ -90,12 +90,7 @@
 			summarise(mdCumIntensity = median(Cum_Int)) %>% 
 			as.data.frame()
 		ssp <- unlist(strsplit(i, "/pts/"))[2]
-		eval(parse(text = paste0("write.csv(d, '", ssp, "_CumMHWInt.csv')")))
+		eval(parse(text = paste0("write.csv(d, '", ssp, "_CumMHWInt.csv')"))) # Output files are archived in the data folder of https://github.com/jcvdav/recovery_time
 		}
 
 
-# Messing with plots ------------------------------------------------------
-
-	ggplot(read.csv("/Users/davidschoeman/Dropbox (GCERG)/Documents/Student Documents/Ongoing Students/Nur/MHW_Nur/ssp126_CumMHWInt.csv"), aes(x = year, y = mdCumIntensity, colour = Pixel)) +
-		geom_line() +
-		geom_hline(aes(yintercept = 600))

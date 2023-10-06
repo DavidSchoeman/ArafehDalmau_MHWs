@@ -14,7 +14,7 @@
 	
 # Read coordinates, find extent, square it out, then extract points -------------
 
-	dat <- read.csv("Sites_MHWs.csv") # Data provided by Nur on 17 November 2020
+	dat <- read.csv("Data/Sites_MHWs.csv") # Data provided by Nur on 17 November 2020
 	r <- rasterFromXYZ(dat[,c(3, 2, 4)], crs = projection(raster()))
 	r <- crop(raster(), extent(r) + 2)
 		r[] <- 1:ncell(r)
@@ -69,7 +69,7 @@
 		select(x, y, year, Cum_Int) %>% 
 		pivot_wider(names_from = year, values_from = Cum_Int) %>% 
 		left_join(d) %>% 
-		write.csv("Recomputed_OISST_Cum_Int.csv", row.names = FALSE)
+		write.csv("Data/Recomputed_OISST_Cum_Int.csv", row.names = FALSE)
 		
 		
 		
