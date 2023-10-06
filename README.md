@@ -19,6 +19,8 @@ Note that the folders/directories named in this code pertain to my own setup, an
 
 Code chunks "11_Compute_MHW_CumInt_2014_2015.R" and "12_Projected_MHW_Nur.R" use the pre-processed data to extract the observed and projected MHW stats used in this analysis.
 
+Note that data produced using this code is archived in the data folder of the associated GitHub repo for this project at: https://github.com/jcvdav/recovery_time
+
 # Fair warning about computing resources
 Raw and processed data files (mainly in netCDF format) require several terrabytes of storage space. Some routines are also memory intensive, so adjustments to arguments might be needed in the calls to set up parallel processes. Finally, depending on processor speed and number of ESMs/scenarios considered, this workflow can take weeks to many weeks to run. Do not attempt the workflow before provisioning your machine accordingly.
 
