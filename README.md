@@ -13,8 +13,12 @@ CMIP6 sea-surface temperature projections were downloaded in 2020/2021 from the 
 Code was developed over the period 2020–2023. Some packages might now be deprecated or are nearing deprecation (e.g., raster). As a result, I have subsequently improved some workflows for a follow-on paper and I will update this repo with that improved code once that paper is published.
 
 # How to use the code
-After downloading the requisite data, the user should run the code chunks sequentially from "1_tos_Regrid_Anom" to "XXX". Each code chunk should produce output (files written to disk) that is used as input in the subsequent chunk(s).
+To build the required datasets, it is necessary to pre-process OISST and CMIP6 data. After downloading the requisite data (links above), the user should run the code chunks sequentially from "1_tos_Regrid_Anom" to "10_Stack_Rasters.R". Each code chunk should produce output (files written to disk) that is used as input in the subsequent chunk(s).
+
 Note that the folders/directories named in this code pertain to my own setup, and these paths will need to be edited to suit the user's own machine.
 
-# Fair warning
-Raw and processed data files (mainly in netCDF format) require several terrabytes of storage space. Do not attempt the workflow before provisioning your machine accordingly.
+Code chunks "11_Compute_MHW_CumInt_2014_2015.R" and "12_Projected_MHW_Nur.R" use the pre-processed data to extract the observed and projected MHW stats used in this analysis.
+
+# Fair warning about computing resources
+Raw and processed data files (mainly in netCDF format) require several terrabytes of storage space. Some routines are also memory intensive, so adjustments to arguments might be needed in the calls to set up parallel processes. Finally, depending on processor speed and number of ESMs/scenarios considered, this workflow can take weeks to many weeks to run. Do not attempt the workflow before provisioning your machine accordingly.
+

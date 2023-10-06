@@ -66,8 +66,6 @@ eval(parse(text = paste0("df <- readRDS('", i, "')")))
 nm <- gsub("HMWtrendDF", "HMWtrendRasterStack", i) # Make a name for the output
 eval(parse(text = paste0("r <- rasterFromXYZ(df, crs = projection(raster()))")))
 ii <- ii + 1
-	
-	
 		
 		# Loop through files
 		iFold <- "/Volumes/CMIP6_MHW_Data/temp_csv" # A temporary output path...this is going to generate a LOT of files!
@@ -101,3 +99,5 @@ ii <- ii + 1
 			eval(parse(text = paste0("saveRDS(out, file = '", nm, "')")))
 			cat(paste("\n", i, "Completed\n"))
 		}
+
+# Goto 10_Stack_Rasters.R

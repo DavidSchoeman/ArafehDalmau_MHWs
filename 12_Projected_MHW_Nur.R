@@ -1,4 +1,4 @@
-# Breaking combined data into blocks for processing
+# Similar to OISST, but computing projected cumulative MHW stats 
 	# Written by Dave S
 		# November 2020
 

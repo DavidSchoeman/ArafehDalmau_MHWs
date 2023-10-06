@@ -1,4 +1,4 @@
-# Breaking combined data into blocks for processing
+# Computing MHW intensity during the 2014/2015 heatwave
 	# Written by Dave S
 		# November 2020
 
